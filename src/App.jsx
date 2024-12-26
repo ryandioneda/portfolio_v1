@@ -1,14 +1,11 @@
 import { useState } from 'react'
-import './App.scss'
+import Index from './pages/Index/Index';
+import "@fontsource/inter";
 
 function App() {
-
   return (
-    <>
-      <div>
-      </div>
-    </>
+    <Index />
   )
 }
 
-export default App
+export default App;
