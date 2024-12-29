@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        'xxl': '1.9rem',
+        'mobile-large': '1.9rem',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

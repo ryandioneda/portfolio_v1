@@ -1,21 +1,28 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import Index from './pages/Index/Index';
 import "@fontsource/inter";
 
+// common app components imports
 import Nav from './components/Nav/Nav';
 
+// page imports
+import Index from './pages/Index/Index';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Nav />
+    <div>
+      <BrowserRouter>
+        <Nav />
 
-      <Routes>
-        <Route path='/' element={<Index />} />
-      </Routes>
-    
-    </BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Index />} />
+        </Routes>
+      
+      </BrowserRouter>
+
+    </div>
+
+
   )
 }
 
