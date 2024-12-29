@@ -13,7 +13,7 @@ const Nav = () => {
     };
 
     return (
-        <div id='nav-wrapper' className="bg-offblack w-full p-2.5 font-inter sm:bg-gray-500 border-b-2 border-gray-500 border-opacity-50 sticky">
+        <div id='nav-wrapper' className="bg-offblack w-full p-2.5 font-inter sm:bg-slate border-b-2 border-slate border-opacity-50 sticky z-20">
             <nav id='nav-elements-container' className="flex uppercase font text-m font-normal justify-start">
                 <div id='name-link-container' className='px-2.5 py-1 text-ivory font-semibold'>
                     <Link to="/">Ryan Dioneda</Link>
