@@ -4,6 +4,7 @@ import "@fontsource/inter";
 
 // common app components imports
 import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer';
 
 // page imports
 import Index from './pages/Index/Index';
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Index />} />
         </Routes>
-      
+        <Footer />
       </BrowserRouter>
 
     </div>
