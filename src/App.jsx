@@ -1,10 +1,21 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Index from './pages/Index/Index';
 import "@fontsource/inter";
 
+import Nav from './components/Nav/Nav';
+
+
 function App() {
   return (
-    <Index />
+    <BrowserRouter>
+      <Nav />
+
+      <Routes>
+        <Route path='/' element={<Index />} />
+      </Routes>
+    
+    </BrowserRouter>
   )
 }
 
