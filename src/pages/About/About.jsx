@@ -4,22 +4,22 @@ function About() {
 
     return (
         <div id="about-wrapper" className='p-2.5 font-inter'>
-            <div id="main-about-container" className=' p-5 grid grid-cols-1 gap-5 md:grid-cols-2'>
+            <div id="main-about-container" className=' p-5 grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-2'>
 
-                <div id="grid-col-1" className="col-span-1 p-1">
-                    <div id="image-container" className='w-full h-auto flex justify-center md:justify-end'> 
+                <div id="grid-col-1" className="col-span-1 p-1 md:flex md:justify-center">
+                    <div id="image-container" className='w-full h-auto flex justify-center'> 
                         <img src={Headshot} alt="" className='w-full h-auto max-w-xs md:max-w-lg rounded-xl'/>
                     </div>
 
                 </div>
 
-                <div id="grid-col-2" className="col-span-1 p-1 md:w-[70%]">
-                    <div id="about-text-container">
-                        <div id="about-text-1" className='text-ivory text-xl mb-5'>
+                <div id="grid-col-2" className="col-span-1 p-1 md:flex md:justify-center">
+                    <div id="about-text-container" className='flex flex-col'>
+                        <div id="about-text-1" className='text-ivory text-xl md:text-[1.5rem] mb-5'>
                             <span>Hi! I'm Ryan, a fullstack developer currently in Charlottesville, Virginia.</span>
                         </div>
 
-                        <div id="about-text-2" className='text-slate opacity-50 text-xl mb-20'>
+                        <div id="about-text-2" className='text-slate opacity-50 text-xl md:text-[1.5rem] mb-20'>
                             <span>I develop effective and engaging solutions that address real challenges and enhance user experiences.</span>
                         </div>
 
