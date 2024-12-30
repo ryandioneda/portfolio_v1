@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <div id="footer-wrapper" className="bg-offblack px-2.5 pb-5 pt-2.5 absolute bottom-0 w-full border-t-2 border-slate border-opacity-50 font-inter">
+        <div id="footer-wrapper" className="bg-offblack px-2.5 pb-5 pt-2.5 w-full border-t-2 border-slate border-opacity-50 font-inter">
             <div id="footer-container" className="flex px-2.5 text-xs sm:text-[1em]">
                 <div id="name-year-text" className="text-ivory">&copy; Ryan Dioneda</div>
 

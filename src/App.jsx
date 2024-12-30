@@ -8,16 +8,22 @@ import Footer from './components/Footer/Footer';
 
 // page imports
 import Index from './pages/Index/Index';
+import About from './pages/About/About';
 
 function App() {
   return (
-    <div>
+    <div className='flex flex-col min-h-screen'>
       <BrowserRouter>
         <Nav />
+        <div className="flex-grow">
 
-        <Routes>
-          <Route path='/' element={<Index />} />
-        </Routes>
+          <Routes>
+            <Route path='/' element={<Index />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+          
+        </div>
+
         <Footer />
       </BrowserRouter>
 

@@ -16,7 +16,7 @@ const Nav = () => {
         <div id='nav-wrapper' className="bg-offblack w-full p-2.5 font-inter sm:bg-slate border-b-2 border-slate border-opacity-50 sticky z-20">
             <nav id='nav-elements-container' className="flex uppercase font text-m font-normal justify-start">
                 <div id='name-link-container' className='px-2.5 py-1 text-ivory font-semibold'>
-                    <Link to="/">Ryan Dioneda</Link>
+                    <Link to="/" onClick={() => setIsActive(false)}>Ryan Dioneda</Link>
                 </div>
 
                 {/* Burger & Burger Toggle effect */}
@@ -56,14 +56,14 @@ const Nav = () => {
                     animate={{ y: isActive ? 0 : -0, opacity: isActive ? 1 : 0 }} 
                     transition={{ duration: 0.3 }}>
                     
-                    <Link to="/" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40'>Work</Link>
-                    <Link to="/about" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40'>About</Link>
-                    <Link to="/contact" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40'>Contact</Link>
+                    <Link to="/work" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' onClick={() => setIsActive(false)}>Work</Link>
+                    <Link to="/about" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' onClick={() => setIsActive(false)}>About</Link>
+                    <Link to="/contact" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' onClick={() => setIsActive(false)}>Contact</Link>
                 </motion.div>
 
                 {/* If the menu is active show this vertically*/}
                 <div id='links-container' className={`font-semibold text-ivory right-0 top-full ml-auto ${isActive ? "hidden" : "hidden"} sm:flex justify-end gap-3`}>
-                    <Link to="/" className='px-3 py-1 sm:hover:text-offblack sm:hover:opacity-40'>Work</Link>
+                    <Link to="/work" className='px-3 py-1 sm:hover:text-offblack sm:hover:opacity-40'>Work</Link>
                     <Link to="/about" className='px-3 py-1 sm:hover:text-offblack sm:hover:opacity-40'>About</Link>
                     <Link to="/contact" className='px-3 py-1 sm:hover:text-offblack sm:hover:opacity-40'>Contact</Link>
 
