@@ -41,6 +41,7 @@ export default {
       colors: {
         ivory: 'rgb(255, 255, 240)',
         offblack: 'hsl(221, 20%, 11%)',
+        darkgray: 'hsl(221, 20%, 18%)',
         slate: 'rgb(192, 194, 201)',
       }
     },
