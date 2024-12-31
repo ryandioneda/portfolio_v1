@@ -1,3 +1,4 @@
+import IndexCard from '../../components/IndexCard/IndexCard';
 
 function Index() {
     return (
@@ -34,6 +35,47 @@ function Index() {
                         UVA CS '26
                     </div>
 
+                </div>
+            </div>
+
+
+            <div>
+                <p className="text-ivory md:text-[2.5em] mt-5 font-inter">Selected Works</p>
+            </div>
+
+            <div id="selected-works-wrapper" className='p-2.5'>
+                <div id="project-container" className='mt-5'>
+                    <div id="projects-header-container" className='text-[0.75rem] uppercase text-slate flex flex-row border-b-2 border-ivory border-opacity-50'>
+                        <div id='project-header' className='flex-1 text-left opacity-50'>
+                            <p>Project</p>
+                        </div>
+                        <div id="category-header" className='flex-1 hidden md:block md:text-left opacity-50'>
+                            <p className='md:pl-44'>Category</p>
+                        </div>
+                        <div id='type-header' className='flex-1 hidden md:block md:text-left opacity-50'>
+                            <p className="md:pl-44">Type</p>
+                        </div>
+                        <div id='year-header' className='flex-1 text-left md:text-right opacity-50'>
+                            <p>Year</p>
+                        </div>
+                    </div>
+
+                    <div id="project-cards-wrapper">
+                        <IndexCard 
+                        projectName="MovieFy"
+                        categoryName="Development"
+                        typeName="Personal"
+                        yearName="2024" />
+
+                        <IndexCard
+                        projectName="UCL Predictive Model"
+                        categoryName="Development"
+                        typeName="Personal"
+                        yearName="2024" />
+                    </div>
+
+
+                    
                 </div>
             </div>
 
