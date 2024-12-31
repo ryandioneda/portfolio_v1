@@ -35,7 +35,7 @@ function About() {
                                 </div>
 
 
-                                <div id="libraries-frameworks" className="border-l-2 border-ivory pl-2.5 ">
+                                <div id="libraries-frameworks" className="border-l-2 border-ivory pl-2.5 md:w-[50%]">
                                     <h1 className='text-ivory'>Libraries / Frameworks</h1>
                                     <p className='text-sm text-slate opacity-50'>ReactJS, Django, Flask, PostgreSQL, Tailwind CSS, Pandas, BeautifulSoup, NumPy, Matploblib, 
                                         Bootstrap, Scikit-Learn, </p>
