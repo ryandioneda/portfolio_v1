@@ -8,7 +8,7 @@ function Index() {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 0.1
+        staggerChildren: 0.1
       
       }
     }
@@ -60,12 +60,13 @@ function Index() {
                       impactful, engaging solutions.
                     </motion.div>
 
-                    <span id="mobile-text-1" className="font-medium block md:hidden text-mobile-large mt-24">Ryan is</span>
-                    <span id="mobile-text-2" className="font-medium block md:hidden text-mobile-large">A developer</span>
-                    <span id="mobile-text-3" className="font-medium block md:hidden text-mobile-large">With a passion</span>
-                    <span id="mobile-text-4" className="font-medium block md:hidden text-mobile-large">For creating</span>
-                    <span id="mobile-text-5" className="font-medium block md:hidden text-mobile-large">Impactful, engaging</span>
-                    <span id="mobile-text-6" className="font-medium block md:hidden text-mobile-large">Solutions</span>
+                    <motion.div id="mobile-text-1" className="font-medium block md:hidden text-mobile-large mt-24" variants={textItem}>Ryan is</motion.div>
+                    <motion.div id="mobile-text-2" className="font-medium block md:hidden text-mobile-large" variants={textItem}>A developer</motion.div>
+                    <motion.div id="mobile-text-3" className="font-medium block md:hidden text-mobile-large" variants={textItem}>With a passion</motion.div>
+                    <motion.div id="mobile-text-4" className="font-medium block md:hidden text-mobile-large" variants={textItem}>For creating</motion.div>
+                    <motion.div id="mobile-text-5" className="font-medium block md:hidden text-mobile-large" 
+                    variants={textItem}>Impactful, engaging</motion.div>
+                    <motion.div id="mobile-text-6" className="font-medium block md:hidden text-mobile-large" variants={textItem}>Solutions</motion.div>
 
 
                 </motion.div>
@@ -100,7 +101,7 @@ function Index() {
 
 
             <div>
-                <p className="text-ivory md:text-[2.5em] mt-5 font-inter">Selected Works</p>
+                <p className="text-ivory text-[1.5em] md:text-[2.1em] mt-5 font-inter ml-2">Selected Works</p>
             </div>
 
             <div id="selected-works-wrapper" className='p-2.5'>
