@@ -1,9 +1,29 @@
 import Headshot from '../../assets/headshot1.jpg';
+import { motion } from 'framer-motion';
 
 function About() {
 
+    const container = {
+      hidden: { 
+        y: 40,
+        opacity: 0 
+      },
+      show: {
+        y: 0,    
+        opacity: 1,  
+        transition: {
+          duration: 0.6,  
+          ease: "easeOut",  
+        }
+      }
+    };
     return (
-        <div id="about-wrapper" className='p-2.5 font-inter'>
+        <motion.div id="about-wrapper" 
+          className='p-2.5 font-inter'
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
             <div id="main-about-container" className=' p-5 grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-2'>
 
                 <div id="grid-col-1" className="col-span-1 p-1 md:flex md:justify-center">
@@ -58,7 +78,7 @@ function About() {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     )
 
 }

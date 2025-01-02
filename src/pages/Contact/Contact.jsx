@@ -1,7 +1,25 @@
 import React, { useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+
 
 function Contact() {
+
+  
+    const container = {
+      hidden: { 
+        y: 40,
+        opacity: 0 
+      },
+      show: {
+        y: 0,    
+        opacity: 1,  
+        transition: {
+          duration: 0.6,  
+          ease: "easeOut",  
+        }
+      }
+    };
 
     const form = useRef();
     const emailField = useRef();
@@ -44,7 +62,13 @@ function Contact() {
     };
 
     return (
-       <div id="contact-wrapper" className="p-2.5 font-inter">
+       <motion.div
+        id="contact-wrapper"
+        className="p-2.5 font-inter"
+        variants={container}
+        initial="hidden"
+        animate="show"
+       >
             <div id="main-contact-container" className="p-2 grid grid-cols-1 md:grid-cols-2">
                 <div id="grid-col-1" className="col-span-1 p-1 md:flex md:justify-center">
                     <div id="contact-action-heading" className="text-slate opacity-50 text-[1.5rem] md:text-[3rem] mb-10 md:mb-0">
@@ -108,7 +132,7 @@ function Contact() {
                 </div>
 
             </div>
-       </div>
+       </motion.div>
     )
 }
 
