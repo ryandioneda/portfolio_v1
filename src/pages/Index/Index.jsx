@@ -1,6 +1,28 @@
 import IndexCard from '../../components/IndexCard/IndexCard';
+import { motion } from 'framer-motion';
 
 function Index() {
+
+  const textContainer = {
+    hidden: { opacity : 0},
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.1
+      
+      }
+    }
+  }
+
+  const textItem = {
+    hidden: { opacity : 0},
+    show : {
+      opacity: [0, 0.2, 0.4, 0.6, 0.8, 1],
+      duration: 0.3
+    }
+  }
+
+
     return (
         <div id="hero-wrapper" className="px-2 text-offblack">
             <div id="hero-intro-text-container" className="pt-20 pb-10 px-5 font-inter flex flex-col rounded-[1.5rem] bg-gradient-to-br from-[#0b468c] to-[#ac61b9] via-[#d1f7ff] overflow-hidden relative">
@@ -10,10 +32,33 @@ function Index() {
                  after:to-[#b7c1de] after:rounded-full after:animate-blob-reverse after:blur-[50px] after:brightness-125"></div>
 
                 
-                <div id="big-hero-text" className="pt-20 md:pt-40 flex flex-col uppercase z-10">
-                    <span className="font-medium hidden md:block md:text-[2.5em]">Ryan is a developer </span>
-                    <span className="font-medium hidden md:block md:text-[2.5em]">with a passion for creating </span>
-                    <span className="font-medium hidden md:block md:text-[2.5em]">impactful, engaging solutions.</span>
+                <motion.div 
+                  id="big-hero-text" 
+                  className="pt-20 md:pt-40 flex flex-col uppercase z-10"
+                  variants={textContainer}
+                  initial="hidden"
+                  animate="show"
+                >
+                    <motion.div 
+                      className="font-medium hidden md:block md:text-[2.5em]"
+                      variants={textItem} 
+                    >
+                      Ryan is a developer
+                    </motion.div>
+
+                    <motion.div 
+                      className="font-medium hidden md:block md:text-[2.5em]"
+                      variants={textItem}   
+                    >
+                      with a passion for creating
+                    </motion.div>
+
+                    <motion.div 
+                      className="font-medium hidden md:block md:text-[2.5em]"
+                      variants={textItem}
+                    >
+                      impactful, engaging solutions.
+                    </motion.div>
 
                     <span id="mobile-text-1" className="font-medium block md:hidden text-mobile-large mt-24">Ryan is</span>
                     <span id="mobile-text-2" className="font-medium block md:hidden text-mobile-large">A developer</span>
@@ -23,19 +68,34 @@ function Index() {
                     <span id="mobile-text-6" className="font-medium block md:hidden text-mobile-large">Solutions</span>
 
 
-                </div>
+                </motion.div>
 
-                <div id="sub-hero-text-container" className="flex uppercase mt-8 md:gap-56 z-10">
-                    <div id="location-text" className="md:text-[1.15em]">
+                <motion.div 
+                  id="sub-hero-text-container" 
+                  className="flex uppercase mt-8 md:gap-56 z-10"
+                  variants={textContainer}
+                  initial="hidden"
+                  animate="show"
+                  
+                >
+                    <motion.div
+                      id="location-text" 
+                      className="md:text-[1.15em]"
+                      variants={textItem}
+                    >
                         Based in VA
 
-                    </div>
+                    </motion.div>
 
-                    <div id="college-affiliation-text" className="md:text-[1.15em] ml-20 md:ml-0">
+                    <motion.div 
+                      id="college-affiliation-text" 
+                      className="md:text-[1.15em] ml-20 md:ml-0"
+                      variants={textItem}
+                    >
                         UVA CS '26
-                    </div>
+                    </motion.div>
 
-                </div>
+                </motion.div>
             </div>
 
 
