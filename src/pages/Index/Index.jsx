@@ -65,13 +65,18 @@ function Index() {
                         projectName="MovieFy"
                         categoryName="Development"
                         typeName="Personal"
-                        yearName="2024" />
+                        yearName="2024"
+                        projectDescription="Developed a web application that streamlines the process of finding and creating Spotify playlists
+                                              inspired by movies."
+                        isViewable= {true}/>
 
                         <IndexCard
                         projectName="UCL Predictive Model"
                         categoryName="Development"
                         typeName="Personal"
-                        yearName="2024" />
+                        yearName="2024"
+                        projectDescription= "Led the creation of a machine-learning application that predicts the outcome of UEFA Champions League matches."
+                        isViewable={false}/>
                     </div>
 
 
