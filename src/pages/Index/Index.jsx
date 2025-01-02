@@ -66,8 +66,10 @@ function Index() {
                         categoryName="Development"
                         typeName="Personal"
                         yearName="2024"
-                        projectDescription="Developed a web application that streamlines the process of finding and creating Spotify playlists
-                                              inspired by movies."
+                        projectDescription= {{
+                          text: "Developed a web application that streamlines the process of finding and creating Spotify playlists inspired by movies.",
+                          details: ["Development", "Fullstack"]
+                        }}
                         isViewable= {true}
                         projectLink='http://moviefyapp.com'/>
 
@@ -76,7 +78,10 @@ function Index() {
                         categoryName="Development"
                         typeName="Personal"
                         yearName="2024"
-                        projectDescription= "Led the creation of a machine-learning application that predicts the outcome of UEFA Champions League matches."
+                        projectDescription= {{
+                          text: "Led the creation of a machine-learning application that predicts the outcome of UEFA Champions League matches",
+                          details: ["Development", "Machine-Learning (Scikit-Learn)"]
+                        }}
                         isViewable={false}/>
                     </div>
 

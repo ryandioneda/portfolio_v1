@@ -7,15 +7,51 @@ const IndexCard = ({projectName, categoryName, typeName, yearName, projectDescri
 
   const [isActive, setIsActive] = useState(false);
 
+  const container = {
+    still: {x:0},
+    move: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+  
+  const leftHeader = {
+    still: { x: 0 },
+    move: {
+      x: [0, 10, 20],
+      transition: { times: [0, 0.15, 0.3]}
+    }
+  }
+
+  const rightHeader = {
+    still: { x: 0},
+    move: {
+      x: [0, -10, -20],
+      transition: { times: [0, 0.15, 0.3]}
+    }
+  }
+
 
   return (
     <div id="card-wrapper" className="font-inter border-b-2 border-opacity-50 border-ivory">
       <div id="card-container-content">
-        <div id="project-card-header-details" className="hover:bg-ivory hover:text-offblack flex flex-row 
-          text-ivory" onClick={ () => setIsActive(!isActive)}>
-          <div id='project-name' className="flex-1 text-left py-2">
-            <p>{projectName}</p>
-          </div>
+        <motion.div 
+          id="project-card-header-details" 
+          className="group hover:bg-ivory hover:text-offblack flex flex-row text-ivory transition-colors ease-in duration-[0.25s]"
+          onClick={ () => setIsActive(!isActive)}
+          variants={container}
+          initial="still"
+          whileHover="move"
+        
+        >
+          <motion.div 
+            id='project-name' 
+            className="flex-1 text-left py-2"
+            variants={leftHeader}
+          >
+            <p className=''>{projectName}</p>
+          </motion.div>
 
           <div id="category-name" className="flex-1 hidden md:block md:text-left py-2">
             <p className="md:pl-44">{categoryName}</p>
@@ -25,31 +61,50 @@ const IndexCard = ({projectName, categoryName, typeName, yearName, projectDescri
             <p className="md:pl-44">{typeName}</p>
           </div>
 
-          <div id="year-name" className="flex-1 text-left md:text-right py-2">
-            <p>{yearName}</p>
+          <motion.div 
+            id="year-name" 
+            className="flex-1 text-left md:text-right py-2"
+            variants={rightHeader}
+          >
+            <p className=''>{yearName}</p>
+          </motion.div>
 
-
-          </div>
-        </div>
+        </motion.div>
 
         <motion.div
           id="active-project-wrapper"
           className={`text-ivory ${isActive ? 'block' : 'hidden'} flex h-[50vh] font-inter`}
-          initial={{y: -50, opacity: 0}}
-          animate={{y: isActive ? 0: -0, opacity: isActive ? 1 : 0}}
-          transition={{ duration: 0.3}}
+          initial={false}
+          animate={{y: isActive ? 10: -0, opacity: isActive ? 1 : 0}}
+          transition={{ ease: "easeOut", duration: 0.5}}
         >
           <div id='active-project-container' className='flex flex-col mt-6'>
             <div id="project-description" className='w-[75%] md:text-[1.75em] md:w-[60%]'>
-              {projectDescription}
+              {projectDescription.text}
             </div>
 
             <div id="view-project" className={`flex mt-3.5 ${isViewable ? 'block' : 'hidden'}`}>
               <a href={projectLink} target="_blank" rel="noopener noreferrer">
-                <button id='view-button' className='bg-blue-500 p-2.5 text-[1rem] rounded-full font-inter'>
-                  See project
+                <button id='view-button' className='bg-ivory text-offblack p-2.5 text-[1rem] rounded-3xl font-inter'>
+                  See website
                 </button>
               </a>
+            </div>
+
+            <div id='extra-details' className=''>
+              <ul id='details-ul' className='list-disc list-inside text-[1rem] mt-2.5 flex flex-row md:flex-col'>
+                {projectDescription.details.map((detail, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className={`pl-2 md:mt-1 ${index !== 0 ? 'ml-5 md:mt-2.5 md:ml-0' : ''}`}
+                    >
+                      {detail}
+                    </li>
+                  )
+                })}
+              </ul>
+
             </div>
             
           </div>
