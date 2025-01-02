@@ -2,15 +2,17 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 
-const IndexCard = ({projectName, categoryName, typeName, yearName, projectDescription, isViewable}) => {
+const IndexCard = ({projectName, categoryName, typeName, yearName, projectDescription, isViewable, 
+  projectLink = 'none'}) => {
 
   const [isActive, setIsActive] = useState(false);
 
 
   return (
-    <div id="card-wrapper" className="font-inter border-b-2 border-opacity-50 border-ivory" onClick={() => setIsActive(!isActive)}>
+    <div id="card-wrapper" className="font-inter border-b-2 border-opacity-50 border-ivory">
       <div id="card-container-content">
-        <div id="project-card-header-details" className="hover:bg-ivory hover:text-offblack flex flex-row text-ivory">
+        <div id="project-card-header-details" className="hover:bg-ivory hover:text-offblack flex flex-row 
+          text-ivory" onClick={ () => setIsActive(!isActive)}>
           <div id='project-name' className="flex-1 text-left py-2">
             <p>{projectName}</p>
           </div>
@@ -43,9 +45,11 @@ const IndexCard = ({projectName, categoryName, typeName, yearName, projectDescri
             </div>
 
             <div id="view-project" className={`flex mt-3.5 ${isViewable ? 'block' : 'hidden'}`}>
-              <button id='view-button' className='bg-blue-500 p-2.5 text-[1rem] rounded-full font-inter'>
-                See project
-              </button>
+              <a href={projectLink} target="_blank" rel="noopener noreferrer">
+                <button id='view-button' className='bg-blue-500 p-2.5 text-[1rem] rounded-full font-inter'>
+                  See project
+                </button>
+              </a>
             </div>
             
           </div>

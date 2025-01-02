@@ -68,7 +68,8 @@ function Index() {
                         yearName="2024"
                         projectDescription="Developed a web application that streamlines the process of finding and creating Spotify playlists
                                               inspired by movies."
-                        isViewable= {true}/>
+                        isViewable= {true}
+                        projectLink='http://moviefyapp.com'/>
 
                         <IndexCard
                         projectName="UCL Predictive Model"
