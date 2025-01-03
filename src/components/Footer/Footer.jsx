@@ -7,9 +7,6 @@ const Footer = () => {
 
                 <div id="contact-links" className="text-ivory ml-auto flex gap-5">
                     <div className="hover:text-slate">
-                        <a href="https://www.linkedin.com/in/ryan-dioneda" target="_blank">LinkedIn</a>
-                    </div>
-                    <div className="hover:text-slate">
                         <a href="mailto:e.ryan.dioneda@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
                     </div>
 

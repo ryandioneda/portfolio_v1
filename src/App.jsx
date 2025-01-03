@@ -34,14 +34,12 @@ function App() {
       <BrowserRouter>
         <Nav />
         <div className="flex-grow">
-
           <Routes>
             <Route path='/' element={<Index />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/work' element={<Work />} />
+            {/* <Route path='/work' element={<Work />} /> */}
           </Routes>
-          
         </div>
 
         <Footer />

@@ -88,7 +88,7 @@ const Nav = () => {
                       className='mt-5'
                       variants={navItemVariants}
                     >
-                      <Link to="/work" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' onClick={() => setIsOpen(false)}>Work</Link>
+                      <Link to="/about" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' onClick={() => setIsOpen(false)}>About</Link>
                     </motion.li>
                 
 
@@ -96,7 +96,7 @@ const Nav = () => {
                       className='mt-2.5'
                       variants={navItemVariants}
                     >
-                      <Link to="/about" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' onClick={() => setIsOpen(false)}>About</Link>
+                      <Link to="/contact" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' onClick={() => setIsOpen(false)}>Contact</Link>
                     </motion.li>
 
                   
@@ -105,7 +105,16 @@ const Nav = () => {
                       variants={navItemVariants}
             
                     >
-                      <Link to="/contact" className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' onClick={() => setIsOpen(false)}>Contact</Link>
+                      <a 
+                        href="https://www.linkedin.com/in/ryan-dioneda/" 
+                        className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={() => setIsOpen(false)}
+                      >
+                      LinkedIn
+                      </a>
+                  
                     </motion.li>
                    
 
@@ -113,10 +122,17 @@ const Nav = () => {
                 </motion.ul>
 
                 <div id='links-container' className={`font-semibold text-ivory right-0 top-full ml-auto ${isOpen ? "hidden" : "hidden"} sm:flex justify-end gap-3`}>
-                    <Link to="/work" className='px-3 py-1 sm:hover:text-offblack sm:hover:opacity-40'>Work</Link>
                     <Link to="/about" className='px-3 py-1 sm:hover:text-offblack sm:hover:opacity-40'>About</Link>
                     <Link to="/contact" className='px-3 py-1 sm:hover:text-offblack sm:hover:opacity-40'>Contact</Link>
-
+                    <a 
+                      href="https://www.linkedin.com/in/ryan-dioneda/" 
+                      className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      LinkedIn
+                    </a>
 
                 </div>
 
