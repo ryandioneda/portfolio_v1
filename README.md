@@ -20,7 +20,7 @@ This portfolio is a personalized web application to highlight information about 
 ## Technologies Used
 
 - [ReactJS](https://github.com/facebook/react) - A JavaScript library for building user interfaces.
-- [Vite]()
+- [Vite](https://github.com/vitejs/vite) - A JavaScript bundler to efficiently develop React applications
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) - A utility-frst CSS framework to rapidly build responsive websites
 - [Lenis Scroll](https://github.com/darkroomengineering/lenis) - A lightweight smooth scroll library
 - [Framer Motion](https://github.com/motiondivision/motion) - An animation library for React
