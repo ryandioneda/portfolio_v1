@@ -12,7 +12,6 @@ import Footer from './components/Footer/Footer';
 import Index from './pages/Index/Index';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
-import Work from './pages/Work/Work';
 import { useEffect } from 'react';
 import 'lenis/dist/lenis.css';
 
