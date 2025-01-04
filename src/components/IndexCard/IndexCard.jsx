@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import moviefy_page1 from '../../assets/moviefy_page1.png';
 
 
 const IndexCard = ({projectName, categoryName, typeName, yearName, projectDescription, isViewable, 
