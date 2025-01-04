@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import WorkCard from "../../components/WorkCard/WorkCard";  
 
 function Work() {
     
@@ -36,7 +36,7 @@ function Work() {
 
                 <div id="grid-col-2" className="col-span-1 p-1 text-ivory text-[1.15rem] md:text-[1.5rem] md:flex md:justify-start">
                     <div id="cards-wrapper">
-                        Cards!
+                        <WorkCard />
                     </div>
                 </div>
             </div>
