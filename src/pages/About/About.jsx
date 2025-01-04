@@ -34,12 +34,12 @@ function About() {
                 </div>
 
                 <div id="grid-col-2" className="col-span-1 p-1 md:flex md:justify-center">
-                    <div id="about-text-container" className='flex flex-col'>
-                        <div id="about-text-1" className='text-ivory text-xl md:text-[1.5rem] mb-5'>
+                    <div id="about-text-container" className='flex flex-col md:w-[95%]'>
+                        <div id="about-text-1" className='text-ivory md:w-[70%] text-xl md:text-[1.5rem] mb-5'>
                             <span>Hi! I'm Ryan, a fullstack developer currently in Charlottesville, Virginia.</span>
                         </div>
 
-                        <div id="about-text-2" className='text-slate opacity-50 text-xl md:text-[1.5rem] mb-20'>
+                        <div id="about-text-2" className='text-slate md:w-[70%] opacity-50 text-xl md:text-[1.5rem] mb-20'>
                             <span>I develop effective and engaging solutions that address real challenges and enhance user experiences.</span>
                         </div>
 
@@ -48,23 +48,24 @@ function About() {
                                 <h1 className='text-ivory'>Skills</h1>
                             </div>
 
-                            <div id="skills-list" className='flex flex-col gap-5 md:gap-0 md:flex-row'>
-                                <div id="technical-languages" className="border-l-2 border-ivory pl-2.5">
+                            <div id="skills-list" className='flex flex-col gap-5 md:gap-0 md:flex-row border-opacity-70'>
+                                <div id="technical-languages" className="border-l-2 border-ivory pl-2.5 border-opacity-75 md:w-[30%]">
+                  
                                     <h1 className='text-ivory'>Languages</h1>
-                                    <p className='text-sm text-slate opacity-50'>Python, Java, JavaScript, HTML5, CSS, C, SQL</p>
+                                    <p className='text-[0.8em] text-slate opacity-50'>Python, Java, JavaScript, HTML5, CSS, C, SQL</p>
                                 </div>
 
 
-                                <div id="libraries-frameworks" className="border-l-2 border-ivory pl-2.5 md:w-[50%]">
+                                <div id="libraries-frameworks" className="border-l-2 border-ivory pl-2.5 md:w-[30%]">
                                     <h1 className='text-ivory'>Libraries / Frameworks</h1>
-                                    <p className='text-sm text-slate opacity-50'>ReactJS, Django, Flask, PostgreSQL, Tailwind CSS, Pandas, BeautifulSoup, NumPy, Matploblib, 
-                                        Bootstrap, Scikit-Learn, </p>
+                                    <p className='text-[0.8em] text-slate opacity-50'>ReactJS, Django, Flask, PostgreSQL, Tailwind CSS, Pandas, BeautifulSoup, NumPy, 
+                                        Bootstrap, Scikit-Learn</p>
                                 </div>
 
 
-                                <div id="tools" className="border-l-2 border-ivory pl-2.5">
+                                <div id="tools" className="border-l-2 border-ivory pl-2.5 md:w-[25%]">
                                     <h1 className='text-ivory'>Tools</h1>
-                                    <p className='text-sm text-slate opacity-50'>Git, VS Code, AWS, Vite, Docker, Webpack</p>
+                                    <p className='text-[0.8em] text-slate opacity-50'>Git, VS Code, AWS, Vite, Docker, Webpack</p>
                                 </div>
 
                             </div>
