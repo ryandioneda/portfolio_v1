@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import moviefy_page1 from '../../assets/moviefy_page1.png';
 
 
 const IndexCard = ({projectName, categoryName, typeName, yearName, projectDescription, isViewable, 
-  projectLink = 'none'}) => {
+  projectLink = 'none', }) => {
 
   const [isActive, setIsActive] = useState(false);
 
@@ -79,11 +80,11 @@ const IndexCard = ({projectName, categoryName, typeName, yearName, projectDescri
           transition={{ ease: "easeOut", duration: 0.5}}
         >
           <div id='active-project-container' className='flex flex-col mt-6'>
-            <div id="project-description" className='w-[75%] md:text-[1.75em] md:w-[60%]'>
+            <div id="project-description" className='w-[75%] text-0.[75em] md:text-[1.75em] md:w-[60%]'>
               {projectDescription.text}
             </div>
 
-            <div id="view-project" className={`flex mt-3.5 ${isViewable ? 'block' : 'hidden'}`}>
+            <div id="view-project" className={`flex mb-2 mt-3.5 ${isViewable ? 'block' : 'hidden'}`}>
               <a href={projectLink} target="_blank" rel="noopener noreferrer">
                 <button id='view-button' className='bg-ivory text-offblack p-2.5 text-[1rem] rounded-3xl font-inter'>
                   See website
@@ -91,21 +92,26 @@ const IndexCard = ({projectName, categoryName, typeName, yearName, projectDescri
               </a>
             </div>
 
-            <div id='extra-details' className=''>
-              <ul id='details-ul' className='list-disc list-inside text-[1rem] mt-2.5 flex flex-row md:flex-col'>
+            <div id='extra-details' className='flex items-start p-0 m-0'>
+              <ul id='details-ul' className='text-[1rem] mt-2.5 md:text-[1em] text-[0.8em] flex flex-row md:flex-col list-none p-0 m-0'>
                 {projectDescription.details.map((detail, index) => {
                   return (
                     <li
                       key={index}
-                      className={`pl-2 md:mt-1 ${index !== 0 ? 'ml-5 md:mt-2.5 md:ml-0' : ''}`}
+                      className={`items-start md:mt-1 ${index !== 0 ? 'ml-5 md:mt-2.5 md:ml-0 ' : ''}`}
                     >
-                      {detail}
+                      <div className='flex flex-row items-start'>
+
+                        <div className="bg-white rounded-full text-white text-[12px] font-inter w-2 h-2 mr-[5px] mt-[7px] block"></div>
+                        {detail}
+                      </div>
                     </li>
                   )
                 })}
               </ul>
 
             </div>
+
             
           </div>
 

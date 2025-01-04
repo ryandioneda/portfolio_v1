@@ -126,7 +126,7 @@ const Nav = () => {
                     <Link to="/contact" className='px-3 py-1 sm:hover:text-offblack sm:hover:opacity-40'>Contact</Link>
                     <a 
                       href="https://www.linkedin.com/in/ryan-dioneda/" 
-                      className='px-5 py-1 sm:hover:text-offblack sm:hover:opacity-40' 
+                      className='px-3 py-1 sm:hover:text-offblack sm:hover:opacity-40' 
                       target="_blank" 
                       rel="noopener noreferrer"
                       onClick={() => setIsOpen(false)}
